@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darkside Tattoo Studio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#080808;--card:#111111;--accent:#dc2626;--text:#f1f5f9;--muted:#64748b;}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}
+nav{position:fixed;top:0;width:100%;background:rgba(8,8,8,0.97);backdrop-filter:blur(10px);padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid rgba(220,38,38,0.3);}
+.logo{font-size:1.5rem;font-weight:900;color:var(--accent);letter-spacing:3px;text-transform:uppercase;}
+.nav-links a{color:var(--text);text-decoration:none;margin-left:2rem;font-size:0.9rem;}
+.nav-links a:hover{color:var(--accent);}
+.btn-red{background:var(--accent);color:white;padding:0.7rem 1.8rem;border:none;border-radius:0.4rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.btn-red:hover{background:#b91c1c;}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:8rem 5% 4rem;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=1600&q=80') center/cover;opacity:0.2;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,0.97) 50%,rgba(8,8,8,0.5));}
+.hero-content{position:relative;max-width:600px;}
+.hero-badge{display:inline-block;background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.4);color:var(--accent);padding:0.4rem 1rem;border-radius:2rem;font-size:0.85rem;margin-bottom:1.5rem;}
+.hero h1{font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:2px;}
+.hero h1 span{color:var(--accent);}
+.hero p{color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;}
+.section{padding:5rem 5%;}
+.section-tag{color:var(--accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.8rem;}
+.section-title{font-size:2.5rem;font-weight:900;margin-bottom:1rem;text-transform:uppercase;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
+.gallery-item{overflow:hidden;border-radius:0.5rem;aspect-ratio:1;border:1px solid rgba(220,38,38,0.1);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.gallery-item:hover img{transform:scale(1.08);}
+.artists-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
+.artist-card{background:var(--card);border-radius:1rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);transition:all 0.3s;}
+.artist-card:hover{border-color:var(--accent);}
+.artist-img{width:100%;height:280px;object-fit:cover;object-position:top;}
+.artist-body{padding:1.5rem;}
+.artist-name{font-size:1.1rem;font-weight:800;margin-bottom:0.3rem;}
+.artist-style{color:var(--accent);font-size:0.85rem;margin-bottom:0.7rem;}
+.artist-bio{color:var(--muted);font-size:0.85rem;line-height:1.6;}
+.services-section{background:rgba(17,17,17,0.7);padding:5rem 5%;}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem;}
+.service-card{padding:2rem;border-radius:0.8rem;border-left:3px solid var(--accent);background:var(--card);}
+.service-title{font-size:1.1rem;font-weight:800;margin-bottom:0.7rem;}
+.service-desc{color:var(--muted);font-size:0.9rem;line-height:1.6;}
+.service-price{color:var(--accent);font-weight:700;margin-top:0.8rem;}
+.cta{padding:5rem 5%;text-align:center;background:linear-gradient(135deg,rgba(220,38,38,0.1),rgba(8,8,8,0.8));}
+.cta h2{font-size:2.5rem;font-weight:900;text-transform:uppercase;margin-bottom:1rem;}
+.cta p{color:var(--muted);margin-bottom:2rem;font-size:1.05rem;}
+footer{background:#040404;padding:3rem 5%;text-align:center;color:var(--muted);border-top:1px solid rgba(220,38,38,0.1);}
+.footer-logo{font-size:1.8rem;font-weight:900;color:var(--accent);margin-bottom:0.8rem;letter-spacing:3px;}
+@media(max-width:768px){.hero h1{font-size:2rem;}.gallery-grid{grid-template-columns:repeat(2,1fr);}.artists-grid,.services-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">DARKSIDE</div>
+  <div class="nav-links">
+    <a href="#">Ana Sayfa</a><a href="#">Galeri</a><a href="#">Sanatçılar</a><a href="#">Hizmetler</a><a href="#">Randevu</a>
+  </div>
+  <a href="#" class="btn-red">Randevu Al</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Istanbul'un En Prestijli Tattoo Studiosu</div>
+    <h1>Derinize <span>İşlenen</span> Sanat</h1>
+    <p>Darkside Tattoo Studio'da 10 yılı aşkın deneyimli sanatçılarımızla özgün, kalıcı ve anlamlı dövme tasarımları hayata geçiriyoruz.</p>
+    <a href="#" class="btn-red">Galeriyi İncele</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-tag">Çalışmalarımız</div>
+  <div class="section-title">Galeri</div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=500&q=80" alt="Tattoo"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=500&q=80" alt="Tattoo"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1513556667906-c27c3cbe82f2?w=500&q=80" alt="Tattoo"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530510562399-8a1a98a4c95e?w=500&q=80" alt="Piercing"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&q=80" alt="Tattoo"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=500&q=80" alt="Tattoo"></div>
+  </div>
+</section>
+
+<section class="section" style="background:rgba(17,17,17,0.5);">
+  <div class="section-tag">Ekibimiz</div>
+  <div class="section-title">Sanatçılarımız</div>
+  <div class="artists-grid">
+    <div class="artist-card"><img src="https://images.unsplash.com/photo-1567536768239-0acb4cb08b67?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Kerem Kara</div><div class="artist-style">Blackwork — Realism</div><div class="artist-bio">10 yıllık deneyimi ile blackwork ve realistik portre dövmelerinde ustalaşmıştır.</div></div></div>
+    <div class="artist-card"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Zehra Solmaz</div><div class="artist-style">Watercolor — Geometric</div><div class="artist-bio">Suluboya tekniği ve geometrik tasarımlarıyla tanınan özgün bir dövme sanatçısıdır.</div></div></div>
+    <div class="artist-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Baran Aksoy</div><div class="artist-style">Japanese — Neo-Traditional</div><div class="artist-bio">Japon geleneği ve neo-traditional stilde 8 yıllık uluslararası deneyime sahiptir.</div></div></div>
+  </div>
+</section>
+
+<section class="services-section">
+  <div class="section-tag">Hizmetler</div>
+  <div class="section-title">Ne Yapıyoruz</div>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-title">Kalıcı Dövme</div><div class="service-desc">Her stilde özel tasarım veya mevcut desenlerle profesyonel dövme uygulaması.</div><div class="service-price">500 TL'den başlayan fiyatlarla</div></div>
+    <div class="service-card"><div class="service-title">Piercing</div><div class="service-desc">Steril ekipman ve uzman eller ile güvenli piercing uygulaması.</div><div class="service-price">200 TL'den başlayan fiyatlarla</div></div>
+    <div class="service-card"><div class="service-title">Cover-Up</div><div class="service-desc">Eski veya hatalı dövmeleri yeni bir tasarımla kapama ve yenileme hizmeti.</div><div class="service-price">Fiyat tasarıma göre belirlenir</div></div>
+    <div class="service-card"><div class="service-title">Lazer Silme</div><div class="service-desc">Son teknoloji lazer ekipmanı ile güvenli ve etkili dövme silme seansları.</div><div class="service-price">800 TL/seans'tan başlayan fiyatlarla</div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Dövmenizi Planlamaya Hazır Mısınız?</h2>
+  <p>Ücretsiz tasarım danışması için bugün randevu alın.</p>
+  <a href="#" class="btn-red">Randevu Al</a>
+</section>
+
+<footer>
+  <div class="footer-logo">DARKSIDE</div>
+  <p>Sanat deriye, kalbe kazınır.</p>
+  <p style="margin-top:0.8rem;">info@darksidetattoo.com.tr | +90 212 555 0500 | Karakoy, Istanbul</p>
+  <p style="margin-top:1rem;font-size:0.8rem;">© 2025 Darkside Tattoo Studio. Tüm hakları saklıdır.</p>
+</footer>
+</body>
+</html>
