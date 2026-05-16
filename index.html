@@ -117,5 +117,34 @@ footer{background:#040404;padding:3rem 5%;text-align:center;color:var(--muted);b
   <p style="margin-top:0.8rem;">info@darksidetattoo.com.tr | +90 212 555 0500 | Karakoy, Istanbul</p>
   <p style="margin-top:1rem;font-size:0.8rem;">© 2025 Darkside Tattoo Studio. Tüm hakları saklıdır.</p>
 </footer>
-</body>
+
+<section style="padding:5rem 5%;background:rgba(8,8,8,0.8);">
+  <div style="color:#dc2626;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.6rem;">Stiller</div>
+  <div style="font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom:1.5rem;">Dövme Stillerimiz</div>
+  <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2rem;" id="styleTabs">
+    <button onclick="showStyle('hepsi',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(220,38,38,0.4);border-radius:2rem;font-size:0.82rem;font-weight:700;color:#dc2626;background:rgba(220,38,38,0.1);cursor:pointer;">Tümü</button>
+    <button onclick="showStyle('blackwork',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Blackwork</button>
+    <button onclick="showStyle('realism',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Realism</button>
+    <button onclick="showStyle('geometric',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Geometric</button>
+    <button onclick="showStyle('watercolor',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Watercolor</button>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;" id="styleGrid">
+    <div data-style="blackwork" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="realism" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="geometric" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1513556667906-c27c3cbe82f2?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="watercolor" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="blackwork" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1530510562399-8a1a98a4c95e?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="realism" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="geometric" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div data-style="watercolor" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+  </div>
+</section>
+<script>
+function showStyle(style,btn){
+  document.querySelectorAll('#styleTabs button').forEach(b=>{b.style.borderColor='rgba(255,255,255,0.1)';b.style.color='#64748b';b.style.background='transparent';});
+  btn.style.borderColor='rgba(220,38,38,0.4)';btn.style.color='#dc2626';btn.style.background='rgba(220,38,38,0.1)';
+  document.querySelectorAll('#styleGrid [data-style]').forEach(el=>{el.style.display=style==='hepsi'||el.dataset.style===style?'block':'none';});
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+</script></body>
 </html>
