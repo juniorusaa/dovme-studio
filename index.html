@@ -1,150 +1,2177 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darkside Tattoo Studio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="INK SOCIETY — Derinin altindaki sanat. Alternatif, gotik, underground tattoo stüdyosu." />
+<title>INK SOCIETY — Derinin Altindaki Sanat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{--bg:#080808;--card:#111111;--accent:#dc2626;--text:#f1f5f9;--muted:#64748b;}
-body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}
-nav{position:fixed;top:0;width:100%;background:rgba(8,8,8,0.97);backdrop-filter:blur(10px);padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid rgba(220,38,38,0.3);}
-.logo{font-size:1.5rem;font-weight:900;color:var(--accent);letter-spacing:3px;text-transform:uppercase;}
-.nav-links a{color:var(--text);text-decoration:none;margin-left:2rem;font-size:0.9rem;}
-.nav-links a:hover{color:var(--accent);}
-.btn-red{background:var(--accent);color:white;padding:0.7rem 1.8rem;border:none;border-radius:0.4rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
-.btn-red:hover{background:#b91c1c;}
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:8rem 5% 4rem;}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=1600&q=80') center/cover;opacity:0.2;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,0.97) 50%,rgba(8,8,8,0.5));}
-.hero-content{position:relative;max-width:600px;}
-.hero-badge{display:inline-block;background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.4);color:var(--accent);padding:0.4rem 1rem;border-radius:2rem;font-size:0.85rem;margin-bottom:1.5rem;}
-.hero h1{font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:2px;}
-.hero h1 span{color:var(--accent);}
-.hero p{color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;}
-.section{padding:5rem 5%;}
-.section-tag{color:var(--accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.8rem;}
-.section-title{font-size:2.5rem;font-weight:900;margin-bottom:1rem;text-transform:uppercase;}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
-.gallery-item{overflow:hidden;border-radius:0.5rem;aspect-ratio:1;border:1px solid rgba(220,38,38,0.1);}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
-.gallery-item:hover img{transform:scale(1.08);}
-.artists-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
-.artist-card{background:var(--card);border-radius:1rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);transition:all 0.3s;}
-.artist-card:hover{border-color:var(--accent);}
-.artist-img{width:100%;height:280px;object-fit:cover;object-position:top;}
-.artist-body{padding:1.5rem;}
-.artist-name{font-size:1.1rem;font-weight:800;margin-bottom:0.3rem;}
-.artist-style{color:var(--accent);font-size:0.85rem;margin-bottom:0.7rem;}
-.artist-bio{color:var(--muted);font-size:0.85rem;line-height:1.6;}
-.services-section{background:rgba(17,17,17,0.7);padding:5rem 5%;}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem;}
-.service-card{padding:2rem;border-radius:0.8rem;border-left:3px solid var(--accent);background:var(--card);}
-.service-title{font-size:1.1rem;font-weight:800;margin-bottom:0.7rem;}
-.service-desc{color:var(--muted);font-size:0.9rem;line-height:1.6;}
-.service-price{color:var(--accent);font-weight:700;margin-top:0.8rem;}
-.cta{padding:5rem 5%;text-align:center;background:linear-gradient(135deg,rgba(220,38,38,0.1),rgba(8,8,8,0.8));}
-.cta h2{font-size:2.5rem;font-weight:900;text-transform:uppercase;margin-bottom:1rem;}
-.cta p{color:var(--muted);margin-bottom:2rem;font-size:1.05rem;}
-footer{background:#040404;padding:3rem 5%;text-align:center;color:var(--muted);border-top:1px solid rgba(220,38,38,0.1);}
-.footer-logo{font-size:1.8rem;font-weight:900;color:var(--accent);margin-bottom:0.8rem;letter-spacing:3px;}
-@media(max-width:768px){.hero h1{font-size:2rem;}.gallery-grid{grid-template-columns:repeat(2,1fr);}.artists-grid,.services-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+/* ==========================================================
+   INK SOCIETY — TATTOO STUDIO
+   Saf siyah + neon mor + pembe neon + lime + krem
+   ========================================================== */
+
+:root {
+  --bg: #0a0a0a;
+  --bg-soft: #111111;
+  --bg-card: #131313;
+  --line: #1f1f1f;
+  --neon: #a855f7;
+  --neon-deep: #7e22ce;
+  --pink: #ec4899;
+  --lime: #84cc16;
+  --cream: #f5f5f5;
+  --muted: #9a9a9a;
+  --shadow-neon: 0 0 8px rgba(168, 85, 247, 0.6),
+                 0 0 24px rgba(168, 85, 247, 0.4),
+                 0 0 48px rgba(168, 85, 247, 0.2);
+  --shadow-pink: 0 0 8px rgba(236, 72, 153, 0.6),
+                 0 0 24px rgba(236, 72, 153, 0.35);
+  --shadow-lime: 0 0 10px rgba(132, 204, 22, 0.6),
+                 0 0 28px rgba(132, 204, 22, 0.35);
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* ============== GLOBAL TEXT DEFAULTS ============== */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(3.5rem, 11vw, 11rem); }
+h2 { font-size: clamp(2.5rem, 7vw, 6rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.4rem); }
+
+p { color: var(--cream); }
+
+::selection { background: var(--neon); color: var(--bg); }
+
+/* ============== SCROLLBAR ============== */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon), var(--pink));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--pink); }
+
+/* ============== NOISE / GRAIN OVERLAY ============== */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.85'/></svg>");
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015) 0,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.6;
+}
+
+/* ============== NAV ============== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+  transition: padding 0.3s ease, background 0.3s ease;
+}
+
+.nav.scrolled {
+  padding: 0.7rem 2.5rem;
+  background: rgba(10, 10, 10, 0.9);
+  border-bottom-color: rgba(168, 85, 247, 0.4);
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  text-shadow: 0 0 6px rgba(168, 85, 247, 0.6);
+  position: relative;
+}
+
+.nav__logo span {
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+}
+
+.nav__links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--cream);
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--neon), var(--pink));
+  transition: width 0.35s ease;
+  box-shadow: 0 0 6px var(--neon);
+}
+
+.nav__link:hover { color: var(--neon); }
+.nav__link:hover::after { width: 100%; }
+
+.nav__cta {
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--neon);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--neon);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav__cta:hover {
+  background: var(--neon);
+  color: var(--bg);
+  box-shadow: var(--shadow-neon);
+}
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  height: 24px;
+  justify-content: center;
+}
+
+.nav__burger span {
+  display: block;
+  height: 2px;
+  background: var(--cream);
+  transition: all 0.3s ease;
+}
+
+.nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--neon); }
+.nav__burger.open span:nth-child(2) { opacity: 0; }
+.nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--neon); }
+
+/* ============== HERO ============== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1920&q=85');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(35%) contrast(1.1) brightness(0.7);
+  transform: scale(1.05);
+  will-change: transform;
+  transition: transform 8s linear;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.85) 60%, var(--bg) 100%),
+    radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(236, 72, 153, 0.25) 0%, transparent 55%);
+  mix-blend-mode: normal;
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+  max-width: 1400px;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.15);
+}
+
+.hero__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 10px var(--lime);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.hero__title {
+  font-size: clamp(3.5rem, 12vw, 12rem);
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 40px rgba(168, 85, 247, 0.4),
+    0 0 80px rgba(168, 85, 247, 0.25);
+  animation: titleGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    text-shadow:
+      0 0 10px rgba(168, 85, 247, 0.5),
+      0 0 30px rgba(168, 85, 247, 0.35),
+      0 0 60px rgba(168, 85, 247, 0.2);
+  }
+  to {
+    text-shadow:
+      0 0 14px rgba(236, 72, 153, 0.55),
+      0 0 50px rgba(236, 72, 153, 0.4),
+      0 0 100px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.hero__title .accent {
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+}
+
+.hero__sub {
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  color: var(--cream);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--neon);
+  color: var(--bg);
+  border: 1px solid var(--neon);
+  box-shadow: var(--shadow-neon);
+}
+
+.btn--primary:hover {
+  background: transparent;
+  color: var(--neon);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.7), 0 0 36px rgba(168, 85, 247, 0.4);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(245, 245, 245, 0.3);
+}
+
+.btn--ghost:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  box-shadow: var(--shadow-pink);
+  transform: translateY(-2px);
+}
+
+.btn--lime {
+  background: var(--lime);
+  color: var(--bg);
+  border: 1px solid var(--lime);
+  box-shadow: var(--shadow-lime);
+}
+
+.btn--lime:hover {
+  background: transparent;
+  color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn__arrow { transform: translateX(4px); }
+
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--neon));
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--neon);
+  animation: scrollDown 2.4s ease-in-out infinite;
+  box-shadow: 0 0 6px var(--neon);
+}
+
+@keyframes scrollDown {
+  0% { top: -40px; }
+  100% { top: 40px; }
+}
+
+.hero__side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+  z-index: 3;
+}
+
+.hero__side--left { left: -3rem; }
+.hero__side--right { right: -3rem; }
+
+/* ============== MARQUEE STYLES ============== */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 2.2rem 0;
+  background: var(--bg-soft);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  white-space: nowrap;
+}
+
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-soft), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--bg-soft), transparent);
+}
+
+.marquee__track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee__item {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  flex-shrink: 0;
+}
+
+.marquee__item .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--neon);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon);
+  flex-shrink: 0;
+}
+
+.marquee__item:nth-child(even) .dot {
+  background: var(--pink);
+  box-shadow: 0 0 10px var(--pink);
+}
+
+/* ============== SECTION DEFAULTS ============== */
+.section {
+  padding: 7rem 2.5rem;
+  position: relative;
+}
+
+.section--soft { background: var(--bg-soft); }
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 1rem;
+}
+
+.section__tag::before,
+.section__tag::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--neon);
+  box-shadow: 0 0 6px var(--neon);
+}
+
+.section__title {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 14px rgba(168, 85, 247, 0.3);
+}
+
+.section__title .accent {
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+}
+
+.section__desc {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ============== SCROLL REVEAL ============== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left { transform: translateX(-40px); }
+.reveal--left.in { transform: translateX(0); }
+
+.reveal--right { transform: translateX(40px); }
+.reveal--right.in { transform: translateX(0); }
+
+.reveal--scale { transform: scale(0.92); }
+.reveal--scale.in { transform: scale(1); }
+
+/* ============== ARTISTS ============== */
+.artists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.artist {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  border-radius: 4px;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.artist:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon);
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.25);
+}
+
+.artist__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.artist__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(60%) contrast(1.05);
+  transition: filter 0.6s ease, transform 0.8s ease;
+}
+
+.artist:hover .artist__img {
+  filter: grayscale(0%) contrast(1.1);
+  transform: scale(1.07);
+}
+
+.artist__img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10, 10, 10, 0.95) 100%);
+  pointer-events: none;
+}
+
+.artist__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  border-radius: 2px;
+}
+
+.artist__info {
+  padding: 1.4rem 1.4rem 1.6rem;
+  position: relative;
+}
+
+.artist__name {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.artist__style {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--pink);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.3);
+}
+
+.artist__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.artist__followers {
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+}
+
+.artist__followers strong {
+  color: var(--cream);
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+.artist__social {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.artist__social a {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.artist__social a:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+/* ============== GALLERY ============== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.gallery__item {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+  background: #1a1a1a;
+}
+
+.gallery__item:nth-child(1) { grid-row: span 2; aspect-ratio: 1/2; }
+.gallery__item:nth-child(5) { grid-column: span 2; aspect-ratio: 2/1; }
+.gallery__item:nth-child(10) { grid-row: span 2; aspect-ratio: 1/2; }
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(50%) contrast(1.05);
+  transition: transform 0.7s ease, filter 0.5s ease;
+}
+
+.gallery__item:hover .gallery__img {
+  transform: scale(1.12);
+  filter: grayscale(0%) contrast(1.15);
+}
+
+.gallery__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(180deg, transparent 50%, rgba(10, 10, 10, 0.9) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery__item:hover .gallery__overlay { opacity: 1; }
+
+.gallery__caption {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+}
+
+.gallery__tag {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--lime);
+  color: var(--lime);
+  border-radius: 2px;
+  text-shadow: 0 0 6px var(--lime);
+}
+
+/* ============== PROCESS TIMELINE ============== */
+.process {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.process::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--neon) 20%, var(--pink) 80%, transparent);
+  box-shadow: 0 0 8px var(--neon);
+  opacity: 0.4;
+}
+
+.process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  position: relative;
+}
+
+.process__step {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.process__num {
+  grid-column: 2;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--neon);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(168, 85, 247, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.process__step:hover .process__num {
+  background: var(--neon);
+  color: var(--bg);
+  transform: scale(1.08);
+  text-shadow: none;
+}
+
+.process__card {
+  padding: 2rem 2.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.process__card:hover {
+  border-color: var(--neon);
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.2);
+  transform: translateY(-3px);
+}
+
+.process__step:nth-child(even) .process__card--left { display: none; }
+.process__step:nth-child(even) .process__card { grid-column: 3; }
+.process__step:nth-child(odd) .process__card { grid-column: 1; }
+
+.process__step:nth-child(odd) .process__card--right { display: none; }
+
+.process__step-num {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 6px var(--pink);
+}
+
+.process__step-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.process__step-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ============== STUDIO SECTION ============== */
+.studio {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.studio__visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border: 1px solid var(--neon);
+  border-radius: 4px;
+  box-shadow: var(--shadow-neon);
+}
+
+.studio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.1) brightness(0.85);
+  transition: transform 0.8s ease, filter 0.6s ease;
+}
+
+.studio__visual:hover .studio__img {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.studio__tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--lime);
+  color: var(--lime);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-shadow: 0 0 6px var(--lime);
+}
+
+.studio__features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.studio__feature {
+  padding: 1.4rem 1.6rem;
+  background: var(--bg-card);
+  border-left: 3px solid var(--neon);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.studio__feature:hover {
+  background: rgba(168, 85, 247, 0.05);
+  border-left-width: 5px;
+  transform: translateX(4px);
+}
+
+.studio__feature:nth-child(2) { border-left-color: var(--pink); }
+.studio__feature:nth-child(3) { border-left-color: var(--lime); }
+
+.studio__feature-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.studio__feature:nth-child(2) .studio__feature-title { color: var(--pink); }
+.studio__feature:nth-child(3) .studio__feature-title { color: var(--lime); }
+
+.studio__feature-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ============== TESTIMONIALS ============== */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial {
+  position: relative;
+  padding: 2.4rem 2rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -1.5rem;
+  left: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+  opacity: 0.5;
+}
+
+.testimonial:hover {
+  border-color: var(--pink);
+  box-shadow: var(--shadow-pink);
+  transform: translateY(-4px);
+}
+
+.testimonial__stars {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial__star {
+  color: var(--neon);
+  font-size: 0.9rem;
+  text-shadow: 0 0 4px var(--neon);
+  font-style: normal;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  background:
+    linear-gradient(45deg, transparent 46%, var(--neon) 46%, var(--neon) 54%, transparent 54%) center/100% 2px no-repeat,
+    linear-gradient(-45deg, transparent 46%, var(--neon) 46%, var(--neon) 54%, transparent 54%) center/100% 2px no-repeat,
+    linear-gradient(0deg, transparent 45%, var(--neon) 45%, var(--neon) 55%, transparent 55%) center/2px 60% no-repeat;
+}
+.testimonial__star::before, .testimonial__star::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--neon);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  filter: drop-shadow(0 0 4px var(--neon));
+}
+.testimonial__star::after { display: none; }
+
+.testimonial__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--cream);
+  margin-bottom: 1.6rem;
+  font-style: italic;
+}
+
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--neon), var(--pink));
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--bg);
+}
+
+.testimonial__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+}
+
+.testimonial__role {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ============== APPOINTMENT FORM ============== */
+.appointment {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.appointment__info {
+  position: sticky;
+  top: 120px;
+}
+
+.appointment__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.appointment__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.appointment__list-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  border-radius: 50%;
+  text-shadow: 0 0 4px var(--neon);
+}
+
+.form {
+  padding: 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon), var(--pink), transparent);
+  box-shadow: 0 0 10px var(--neon);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 4px rgba(168, 85, 247, 0.3);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  transition: all 0.3s ease;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--neon);
+  box-shadow: 0 0 0 1px var(--neon), 0 0 16px rgba(168, 85, 247, 0.25);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder { color: #555; }
+
+.form__textarea {
+  resize: vertical;
+  min-height: 110px;
+  font-family: var(--font-body);
+}
+
+.form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23a855f7' d='M0 0l6 8 6-8z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form__select option { background: var(--bg); color: var(--cream); }
+
+.form__submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.form__note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.form__success {
+  display: none;
+  padding: 1.2rem;
+  background: rgba(132, 204, 22, 0.1);
+  border: 1px solid var(--lime);
+  border-radius: 2px;
+  color: var(--lime);
+  font-size: 0.92rem;
+  text-align: center;
+  margin-top: 1rem;
+  text-shadow: 0 0 4px var(--lime);
+}
+
+.form__success.show { display: block; }
+
+/* ============== FOOTER ============== */
+.footer {
+  background: #050505;
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 5rem 2.5rem 2rem;
+  position: relative;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1320px;
+  margin: 0 auto 3rem;
+}
+
+.footer__brand p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 1.2rem 0;
+  max-width: 320px;
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: var(--cream);
+}
+
+.footer__logo span { color: var(--neon); text-shadow: var(--shadow-neon); }
+
+.footer__social {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.footer__social a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  box-shadow: var(--shadow-pink);
+  transform: translateY(-2px);
+}
+
+.footer__col h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--neon);
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 6px rgba(168, 85, 247, 0.4);
+}
+
+.footer__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer__col a,
+.footer__col li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.footer__col a:hover { color: var(--cream); }
+
+.footer__bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__bottom a { color: var(--neon); }
+.footer__bottom a:hover { color: var(--pink); }
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 1024px) {
+  .section { padding: 5rem 1.5rem; }
+  .nav { padding: 1rem 1.5rem; }
+  .artists { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery__item:nth-child(1),
+  .gallery__item:nth-child(5),
+  .gallery__item:nth-child(10) { grid-row: auto; grid-column: auto; aspect-ratio: 1/1; }
+  .testimonials { grid-template-columns: 1fr; }
+  .studio { grid-template-columns: 1fr; gap: 2.5rem; }
+  .appointment { grid-template-columns: 1fr; gap: 2.5rem; }
+  .appointment__info { position: static; }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .process::before { left: 30px; }
+  .process__step { grid-template-columns: 60px 1fr; gap: 1.5rem; }
+  .process__num { grid-column: 1; width: 60px; height: 60px; font-size: 1.6rem; }
+  .process__step .process__card,
+  .process__step:nth-child(odd) .process__card,
+  .process__step:nth-child(even) .process__card { grid-column: 2; }
+  .process__step .process__card--left,
+  .process__step .process__card--right { display: block; }
+  .process__step:nth-child(odd) .process__card--right,
+  .process__step:nth-child(even) .process__card--left { display: none; }
+  .hero__side { display: none; }
+}
+
+@media (max-width: 720px) {
+  .nav__links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(14px);
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+  }
+  .nav__links.open { transform: translateY(0); }
+  .nav__burger { display: flex; }
+  .nav__cta { padding: 0.6rem 1rem; font-size: 0.7rem; }
+
+  .section { padding: 4rem 1.2rem; }
+  .section__head { margin-bottom: 2.5rem; }
+
+  .artists { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .form { padding: 1.5rem; }
+  .form__row { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer__bottom { flex-direction: column; text-align: center; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .btn { justify-content: center; }
+  .hero__eyebrow { font-size: 0.6rem; padding: 0.4rem 0.9rem; }
+  .marquee { padding: 1.5rem 0; }
+}
+
+/* ============== UTILITIES ============== */
+.glow-text { text-shadow: 0 0 8px var(--neon), 0 0 24px rgba(168, 85, 247, 0.4); }
+.glow-pink { text-shadow: 0 0 8px var(--pink), 0 0 24px rgba(236, 72, 153, 0.4); }
+.glow-lime { text-shadow: 0 0 8px var(--lime), 0 0 24px rgba(132, 204, 22, 0.4); }
+
+.border-glow {
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4), inset 0 0 10px rgba(168, 85, 247, 0.05);
+}
+
+/* parallax helper */
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
 </style>
 </head>
 <body>
-<nav>
-  <div class="logo">DARKSIDE</div>
-  <div class="nav-links">
-    <a href="#">Ana Sayfa</a><a href="#">Galeri</a><a href="#">Sanatçılar</a><a href="#">Hizmetler</a><a href="#">Randevu</a>
-  </div>
-  <a href="#" class="btn-red">Randevu Al</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Ana navigasyon">
+  <a href="#top" class="nav__logo">INK <span>SOCIETY</span></a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#studio" class="nav__link">Stüdyo</a></li>
+    <li><a href="#artists" class="nav__link">Sanatçılar</a></li>
+    <li><a href="#styles" class="nav__link">Stiller</a></li>
+    <li><a href="#gallery" class="nav__link">Galeri</a></li>
+    <li><a href="#appointment" class="nav__cta">Randevu</a></li>
+  </ul>
+  <button class="nav__burger" id="navBurger" aria-label="Menüyü aç">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Istanbul'un En Prestijli Tattoo Studiosu</div>
-    <h1>Derinize <span>İşlenen</span> Sanat</h1>
-    <p>Darkside Tattoo Studio'da 10 yılı aşkın deneyimli sanatçılarımızla özgün, kalıcı ve anlamlı dövme tasarımları hayata geçiriyoruz.</p>
-    <a href="#" class="btn-red">Galeriyi İncele</a>
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__bg" data-parallax="0.25"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__grid"></div>
+
+  <div class="hero__side hero__side--left">EST. 2014 — UNDERGROUND</div>
+  <div class="hero__side hero__side--right">DERİNİN ALTINDAKİ SANAT</div>
+
+  <div class="hero__content">
+    <span class="hero__eyebrow">Şehrin en karanlık stüdyosu</span>
+    <h1 class="hero__title">DERİNİN<br/><span class="accent">ALTINDAKİ</span> SANAT.</h1>
+    <p class="hero__sub">Mürekkep, acı ve sessizliğin buluştuğu yerde doğan işler. Alternatif, gotik ve underground tattoo kültürünün kalbinde, sana özel bir parça.</p>
+    <div class="hero__actions">
+      <a href="#appointment" class="btn btn--primary">Randevu Al <span class="btn__arrow">→</span></a>
+      <a href="#gallery" class="btn btn--ghost">Çalışmalarımız</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Kaydır</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</header>
+
+<!-- ============ STYLES MARQUEE ============ -->
+<section class="marquee" id="styles" aria-label="Stiller">
+  <div class="marquee__track">
+    <span class="marquee__item">Traditional <span class="dot"></span></span>
+    <span class="marquee__item">Realism <span class="dot"></span></span>
+    <span class="marquee__item">Blackwork <span class="dot"></span></span>
+    <span class="marquee__item">Japanese <span class="dot"></span></span>
+    <span class="marquee__item">Geometric <span class="dot"></span></span>
+    <span class="marquee__item">Fine Line <span class="dot"></span></span>
+    <span class="marquee__item">Neo Traditional <span class="dot"></span></span>
+    <span class="marquee__item">Trash Polka <span class="dot"></span></span>
+    <!-- duplicate set for seamless loop -->
+    <span class="marquee__item">Traditional <span class="dot"></span></span>
+    <span class="marquee__item">Realism <span class="dot"></span></span>
+    <span class="marquee__item">Blackwork <span class="dot"></span></span>
+    <span class="marquee__item">Japanese <span class="dot"></span></span>
+    <span class="marquee__item">Geometric <span class="dot"></span></span>
+    <span class="marquee__item">Fine Line <span class="dot"></span></span>
+    <span class="marquee__item">Neo Traditional <span class="dot"></span></span>
+    <span class="marquee__item">Trash Polka <span class="dot"></span></span>
   </div>
 </section>
 
+<!-- ============ ARTISTS ============ -->
+<section class="section" id="artists">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Sanatçılarımız</span>
+      <h2 class="section__title">İĞNEYİ TUTAN <span class="accent">ELLER.</span></h2>
+      <p class="section__desc">Her biri kendi tarzında usta. Farklı disiplinler, farklı hikayeler — tek ortak noktaları: mürekkebe olan tutku.</p>
+    </div>
+
+    <div class="artists">
+      <article class="artist reveal">
+        <div class="artist__img-wrap">
+          <img class="artist__img" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&q=80" alt="Kara Yıldız" loading="lazy" />
+          <span class="artist__badge">FOUNDER</span>
+        </div>
+        <div class="artist__info">
+          <h3 class="artist__name">Kara Yıldız</h3>
+          <p class="artist__style">Blackwork · Dark Art</p>
+          <div class="artist__stats">
+            <div class="artist__followers">
+              <strong>42.8K</strong>
+              <span>Takipçi</span>
+            </div>
+            <div class="artist__social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="artist reveal">
+        <div class="artist__img-wrap">
+          <img class="artist__img" src="https://images.unsplash.com/photo-1542080681-b52a3820afc6?w=600&q=80" alt="Mona Viole" loading="lazy" />
+          <span class="artist__badge">SENIOR</span>
+        </div>
+        <div class="artist__info">
+          <h3 class="artist__name">Mona Viole</h3>
+          <p class="artist__style">Realism · Portre</p>
+          <div class="artist__stats">
+            <div class="artist__followers">
+              <strong>28.5K</strong>
+              <span>Takipçi</span>
+            </div>
+            <div class="artist__social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="artist reveal">
+        <div class="artist__img-wrap">
+          <img class="artist__img" src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80" alt="Onyx Rüya" loading="lazy" />
+          <span class="artist__badge">JAPAN</span>
+        </div>
+        <div class="artist__info">
+          <h3 class="artist__name">Onyx Rüya</h3>
+          <p class="artist__style">Japanese · Irezumi</p>
+          <div class="artist__stats">
+            <div class="artist__followers">
+              <strong>19.2K</strong>
+              <span>Takipçi</span>
+            </div>
+            <div class="artist__social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="artist reveal">
+        <div class="artist__img-wrap">
+          <img class="artist__img" src="https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=600&q=80" alt="Vega Noir" loading="lazy" />
+          <span class="artist__badge">GEOMETRY</span>
+        </div>
+        <div class="artist__info">
+          <h3 class="artist__name">Vega Noir</h3>
+          <p class="artist__style">Geometric · Sacred</p>
+          <div class="artist__stats">
+            <div class="artist__followers">
+              <strong>15.7K</strong>
+              <span>Takipçi</span>
+            </div>
+            <div class="artist__social">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section section--soft" id="gallery">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Portföy</span>
+      <h2 class="section__title">DERİ ÜZERİNE <span class="accent">İMZALAR.</span></h2>
+      <p class="section__desc">Son çalışmalarımızdan bir seçki. Her parça, taşıyıcısının hikayesinin bir parçası.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=600&q=80" alt="Dövme çalışması 1" loading="lazy" />
+        <span class="gallery__tag">Blackwork</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Gece Yılanı</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=600&q=80" alt="Dövme çalışması 2" loading="lazy" />
+        <span class="gallery__tag">Realism</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Gölge Portre</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=600&q=80" alt="Dövme çalışması 3" loading="lazy" />
+        <span class="gallery__tag">Japanese</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Dalga ve Koi</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80" alt="Dövme çalışması 4" loading="lazy" />
+        <span class="gallery__tag">Geometric</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Kutsal Geometri</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1542080681-b52a3820afc6?w=800&q=80" alt="Dövme çalışması 5" loading="lazy" />
+        <span class="gallery__tag">Fine Line</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">İnce Çizgi Kompozisyon</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&q=80" alt="Dövme çalışması 6" loading="lazy" />
+        <span class="gallery__tag">Neo Trad</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Yenilenen Güller</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1598211686290-a8ef209d87c5?w=600&q=80" alt="Dövme çalışması 7" loading="lazy" />
+        <span class="gallery__tag">Trash Polka</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Kaos Kompozisyon</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?w=600&q=80" alt="Dövme çalışması 8" loading="lazy" />
+        <span class="gallery__tag">Blackwork</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Karanlık Botanik</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1542435503-956c469947f6?w=600&q=80" alt="Dövme çalışması 9" loading="lazy" />
+        <span class="gallery__tag">Realism</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Göz Detayı</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1542080681-b52a3820afc6?w=600&q=80" alt="Dövme çalışması 10" loading="lazy" />
+        <span class="gallery__tag">Japanese</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Ejder Kol Çalışması</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=600&q=80" alt="Dövme çalışması 11" loading="lazy" />
+        <span class="gallery__tag">Geometric</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Mandala Sırt</span></figcaption>
+      </figure>
+      <figure class="gallery__item reveal">
+        <img class="gallery__img" src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=600&q=80" alt="Dövme çalışması 12" loading="lazy" />
+        <span class="gallery__tag">Fine Line</span>
+        <figcaption class="gallery__overlay"><span class="gallery__caption">Minimal Anatomi</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Süreç</span>
+      <h2 class="section__title">SIFIRDAN <span class="accent">CALIŞMA</span> AKIŞI.</h2>
+      <p class="section__desc">İlk fiksten son rötuşa kadar dört adımda, şeffaf ve kontrollü bir süreç.</p>
+    </div>
+
+    <div class="process">
+      <div class="process__steps">
+        <div class="process__step reveal">
+          <div class="process__card process__card--left">
+            <span class="process__step-num">Adım 01</span>
+            <h3 class="process__step-title">Danışma</h3>
+            <p class="process__step-desc">Fikrini dinliyoruz. Hangi bölge, hangi boyut, hangi stil? İlk taslak için beden ve beklenti üzerine kısa bir oturum.</p>
+          </div>
+          <div class="process__num">01</div>
+          <div class="process__card process__card--right">
+            <span class="process__step-num">Adım 01</span>
+            <h3 class="process__step-title">Danışma</h3>
+            <p class="process__step-desc">Fikrini dinliyoruz. Hangi bölge, hangi boyut, hangi stil? İlk taslak için beden ve beklenti üzerine kısa bir oturum.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal">
+          <div class="process__card process__card--left">
+            <span class="process__step-num">Adım 02</span>
+            <h3 class="process__step-title">Tasarım</h3>
+            <p class="process__step-desc">Sanatçı seçtiğin stile göre çalışma eskizini hazırlar. Revizyonlarla birlikte son halini onayladığında, seans planlanır.</p>
+          </div>
+          <div class="process__num">02</div>
+          <div class="process__card process__card--right">
+            <span class="process__step-num">Adım 02</span>
+            <h3 class="process__step-title">Tasarım</h3>
+            <p class="process__step-desc">Sanatçı seçtiğin stile göre çalışma eskizini hazırlar. Revizyonlarla birlikte son halini onayladığında, seans planlanır.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal">
+          <div class="process__card process__card--left">
+            <span class="process__step-num">Adım 03</span>
+            <h3 class="process__step-title">Seans</h3>
+            <p class="process__step-desc">Tek kullanımlık iğne, sterilize ekipman, profesyonel müzik ve sessiz bir ortam. İşlem süresi tasarıma göre 1 ila 6 saat.</p>
+          </div>
+          <div class="process__num">03</div>
+          <div class="process__card process__card--right">
+            <span class="process__step-num">Adım 03</span>
+            <h3 class="process__step-title">Seans</h3>
+            <p class="process__step-desc">Tek kullanımlık iğne, sterilize ekipman, profesyonel müzik ve sessiz bir ortam. İşlem süresi tasarıma göre 1 ila 6 saat.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal">
+          <div class="process__card process__card--left">
+            <span class="process__step-num">Adım 04</span>
+            <h3 class="process__step-title">Kontrol</h3>
+            <p class="process__step-desc">Seans sonrası bakım kitin, iyileşme rehberin ve 2 hafta sonra ücretsiz kontrol görüşmen. İş bitene kadar birlikteyiz.</p>
+          </div>
+          <div class="process__num">04</div>
+          <div class="process__card process__card--right">
+            <span class="process__step-num">Adım 04</span>
+            <h3 class="process__step-title">Kontrol</h3>
+            <p class="process__step-desc">Seans sonrası bakım kitin, iyileşme rehberin ve 2 hafta sonra ücretsiz kontrol görüşmen. İş bitene kadar birlikteyiz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDIO ============ -->
+<section class="section section--soft" id="studio">
+  <div class="container">
+    <div class="studio">
+      <div class="studio__visual reveal reveal--left">
+        <img class="studio__img" src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=900&q=85" alt="Stüdyo iç mekan" loading="lazy" />
+        <span class="studio__tag">PRIVATE STUDIO</span>
+      </div>
+
+      <div class="studio__features reveal reveal--right">
+        <span class="section__tag" style="align-self:flex-start;">Stüdyo</span>
+        <h2 class="section__title" style="text-align:left;margin-bottom:0.5rem;font-size:clamp(2rem,4.5vw,3.6rem);">KAPALI KAPI, <span class="accent">STERİL</span> HAVA.</h2>
+        <p class="section__desc" style="text-align:left;margin-bottom:1rem;">Randevulu çalışıyoruz. Her müşteri için aynı standart: medikal seviye temizlik, profesyonel ekipman ve sessiz bir atmosfer.</p>
+
+        <div class="studio__feature">
+          <h3 class="studio__feature-title">Sterilizasyon</h3>
+          <p class="studio__feature-desc">Otoklav sterilizatör, tek kullanımlık iğne ve eldiven, her seans öncesi yüzey dezenfeksiyonu. Hastane protokolü uyguluyoruz.</p>
+        </div>
+        <div class="studio__feature">
+          <h3 class="studio__feature-title">Ekipman</h3>
+          <p class="studio__feature-desc">Cheyenne Hawk, FK Irons ve Bishop Rotary gibi profesyonel makineler. FDA onaylı mürekkepler, premium iğne kartuşları.</p>
+        </div>
+        <div class="studio__feature">
+          <h3 class="studio__feature-title">Konfor</h3>
+          <p class="studio__feature-desc">Hidrolik koltuk, kişisel müzik listesi, sıcak-soğuk içecek, sessiz ortam. Uzun seanslar için öğle molası planlıyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
 <section class="section">
-  <div class="section-tag">Çalışmalarımız</div>
-  <div class="section-title">Galeri</div>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=500&q=80" alt="Tattoo"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=500&q=80" alt="Tattoo"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1513556667906-c27c3cbe82f2?w=500&q=80" alt="Tattoo"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1530510562399-8a1a98a4c95e?w=500&q=80" alt="Piercing"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&q=80" alt="Tattoo"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=500&q=80" alt="Tattoo"></div>
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Yorumlar</span>
+      <h2 class="section__title">DERİDEKI <span class="accent">SESLER.</span></h2>
+      <p class="section__desc">Çalışmamızı taşıyan müşterilerden birkaç söz.</p>
+    </div>
+
+    <div class="testimonials">
+      <article class="testimonial reveal">
+        <div class="testimonial__stars">
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+        </div>
+        <p class="testimonial__text">"Kara Yıldız'ın eli sihir gibi. Koluma yaptırdığım blackwork sleeve tek seansta planlandığı gibi bitti. Stüdyo atmosferi de inanılmaz — sessiz, steril, profesyonel."</p>
+        <div class="testimonial__author">
+          <div class="testimonial__avatar">D</div>
+          <div>
+            <div class="testimonial__name">Deniz A.</div>
+            <div class="testimonial__role">Full Sleeve · 2025</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial reveal">
+        <div class="testimonial__stars">
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+        </div>
+        <p class="testimonial__text">"İlk dövmemdi ve gerçekten korkuyordum. Ekip o kadar rahattı ki seans bittiğinde şaşırdım. Vega'nın geometrik tasarımı omurgamda müthiş duruyor."</p>
+        <div class="testimonial__author">
+          <div class="testimonial__avatar">S</div>
+          <div>
+            <div class="testimonial__name">Selin K.</div>
+            <div class="testimonial__role">Geometric · 2024</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial reveal">
+        <div class="testimonial__stars">
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+          <span class="testimonial__star" aria-label="5 yıldız"></span>
+        </div>
+        <p class="testimonial__text">"Onyx Rüya, Japon tarzı konusunda bu şehirdeki en iyisi. Sırtıma yaptırdığım ejder kompozisyonu 8 saat sürdü, ama acı çekmedim. Süreç boyunca yanımdaydı."</p>
+        <div class="testimonial__author">
+          <div class="testimonial__avatar">M</div>
+          <div>
+            <div class="testimonial__name">Mert T.</div>
+            <div class="testimonial__role">Back Piece · 2024</div>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="section" style="background:rgba(17,17,17,0.5);">
-  <div class="section-tag">Ekibimiz</div>
-  <div class="section-title">Sanatçılarımız</div>
-  <div class="artists-grid">
-    <div class="artist-card"><img src="https://images.unsplash.com/photo-1567536768239-0acb4cb08b67?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Kerem Kara</div><div class="artist-style">Blackwork — Realism</div><div class="artist-bio">10 yıllık deneyimi ile blackwork ve realistik portre dövmelerinde ustalaşmıştır.</div></div></div>
-    <div class="artist-card"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Zehra Solmaz</div><div class="artist-style">Watercolor — Geometric</div><div class="artist-bio">Suluboya tekniği ve geometrik tasarımlarıyla tanınan özgün bir dövme sanatçısıdır.</div></div></div>
-    <div class="artist-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" alt="Sanatçı" class="artist-img"><div class="artist-body"><div class="artist-name">Baran Aksoy</div><div class="artist-style">Japanese — Neo-Traditional</div><div class="artist-bio">Japon geleneği ve neo-traditional stilde 8 yıllık uluslararası deneyime sahiptir.</div></div></div>
+<!-- ============ APPOINTMENT ============ -->
+<section class="section section--soft" id="appointment">
+  <div class="container">
+    <div class="appointment">
+      <div class="appointment__info reveal">
+        <span class="section__tag" style="align-self:flex-start;">Randevu</span>
+        <h2 class="section__title" style="text-align:left;font-size:clamp(2.4rem,5vw,4.4rem);margin-bottom:1rem;">BİR <span class="accent">SEANS</span> PLANLA.</h2>
+        <p class="section__desc" style="text-align:left;margin-bottom:0.5rem;">Formu doldur, 24 saat içinde sana dönelim. Konsültasyon ücretsiz.</p>
+
+        <ul class="appointment__list">
+          <li>
+            <span class="appointment__list-num">1</span>
+            <span>Formu eksiksiz doldur. Stil ve boyut seçimi süreci hızlandırır.</span>
+          </li>
+          <li>
+            <span class="appointment__list-num">2</span>
+            <span>Ekibimiz 24 saat içinde seninle iletişime geçer, uygun seans saatlerini paylaşır.</span>
+          </li>
+          <li>
+            <span class="appointment__list-num">3</span>
+            <span>İlk görüşmede sanatçıyla tanışır, eskiz üzerine konuşursun. Depozito sonrası randevu kesinleşir.</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form reveal reveal--right" id="appointmentForm" novalidate>
+        <div class="form__row">
+          <div class="form__group" style="margin-bottom:0;">
+            <label class="form__label" for="name">İsim</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Adın Soyadın" required />
+          </div>
+          <div class="form__group" style="margin-bottom:0;">
+            <label class="form__label" for="phone">Telefon</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+90 5xx xxx xx xx" required />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group" style="margin-bottom:0;">
+            <label class="form__label" for="size">Dövme Boyutu</label>
+            <select class="form__select" id="size" name="size" required>
+              <option value="">Seçiniz</option>
+              <option>Küçük (5-10 cm)</option>
+              <option>Orta (10-20 cm)</option>
+              <option>Büyük (20-40 cm)</option>
+              <option>Sleeve / Back Piece</option>
+              <option>Full Body Plan</option>
+            </select>
+          </div>
+          <div class="form__group" style="margin-bottom:0;">
+            <label class="form__label" for="style">Stil</label>
+            <select class="form__select" id="style" name="style" required>
+              <option value="">Seçiniz</option>
+              <option>Traditional</option>
+              <option>Realism</option>
+              <option>Blackwork</option>
+              <option>Japanese</option>
+              <option>Geometric</option>
+              <option>Fine Line</option>
+              <option>Neo Traditional</option>
+              <option>Trash Polka</option>
+              <option>Karışık / Özel</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="message">Açıklama</label>
+          <textarea class="form__textarea" id="message" name="message" placeholder="Fikrini, referans görseller, vücut bölgesi ve varsa özel isteklerini yaz..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary form__submit">Randevu Talebini Gönder <span class="btn__arrow">→</span></button>
+
+        <p class="form__note">Verilerin gizli tutulur. Sadece ekibimiz tarafından görülür.</p>
+        <div class="form__success" id="formSuccess">Talebin alındı. 24 saat içinde dönüş yapacağız.</div>
+      </form>
+    </div>
   </div>
 </section>
 
-<section class="services-section">
-  <div class="section-tag">Hizmetler</div>
-  <div class="section-title">Ne Yapıyoruz</div>
-  <div class="services-grid">
-    <div class="service-card"><div class="service-title">Kalıcı Dövme</div><div class="service-desc">Her stilde özel tasarım veya mevcut desenlerle profesyonel dövme uygulaması.</div><div class="service-price">500 TL'den başlayan fiyatlarla</div></div>
-    <div class="service-card"><div class="service-title">Piercing</div><div class="service-desc">Steril ekipman ve uzman eller ile güvenli piercing uygulaması.</div><div class="service-price">200 TL'den başlayan fiyatlarla</div></div>
-    <div class="service-card"><div class="service-title">Cover-Up</div><div class="service-desc">Eski veya hatalı dövmeleri yeni bir tasarımla kapama ve yenileme hizmeti.</div><div class="service-price">Fiyat tasarıma göre belirlenir</div></div>
-    <div class="service-card"><div class="service-title">Lazer Silme</div><div class="service-desc">Son teknoloji lazer ekipmanı ile güvenli ve etkili dövme silme seansları.</div><div class="service-price">800 TL/seans'tan başlayan fiyatlarla</div></div>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <div class="footer__logo">INK <span>SOCIETY</span></div>
+      <p>2014'ten beri derinin altına işlenen sanat. Underground, alternatif ve gotik — mürekkebin karanlık tarafı.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter">TW</a>
+        <a href="#" aria-label="TikTok">TK</a>
+        <a href="#" aria-label="Pinterest">PI</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Stüdyo</h4>
+      <ul>
+        <li><a href="#studio">Hakkımızda</a></li>
+        <li><a href="#process">Çalışma Akışı</a></li>
+        <li><a href="#">Sanatçılar</a></li>
+        <li><a href="#">Basın</a></li>
+        <li><a href="#">Sürdürülebilirlik</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Hizmetler</h4>
+      <ul>
+        <li><a href="#styles">Stiller</a></li>
+        <li><a href="#gallery">Portföy</a></li>
+        <li><a href="#">Cover-Up</a></li>
+        <li><a href="#">Piercing</a></li>
+        <li><a href="#">Bakım Ürünleri</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>İletişim</h4>
+      <ul>
+        <li>Cihangir, İstanbul</li>
+        <li>Pzt-Cmt · 12:00 — 22:00</li>
+        <li><a href="tel:+902120000000">+90 212 000 00 00</a></li>
+        <li><a href="mailto:hello@inksociety.studio">hello@inksociety.studio</a></li>
+        <li><a href="#appointment">Online Randevu</a></li>
+      </ul>
+    </div>
   </div>
-</section>
 
-<section class="cta">
-  <h2>Dövmenizi Planlamaya Hazır Mısınız?</h2>
-  <p>Ücretsiz tasarım danışması için bugün randevu alın.</p>
-  <a href="#" class="btn-red">Randevu Al</a>
-</section>
-
-<footer>
-  <div class="footer-logo">DARKSIDE</div>
-  <p>Sanat deriye, kalbe kazınır.</p>
-  <p style="margin-top:0.8rem;">info@darksidetattoo.com.tr | +90 212 555 0500 | Karakoy, Istanbul</p>
-  <p style="margin-top:1rem;font-size:0.8rem;">© 2025 Darkside Tattoo Studio. Tüm hakları saklıdır.</p>
+  <div class="footer__bottom">
+    <span>© 2025 INK SOCIETY · Tüm hakları saklıdır.</span>
+    <span>Designed in darkness · <a href="#top">Yukarı dön ↑</a></span>
+  </div>
 </footer>
 
-<section style="padding:5rem 5%;background:rgba(8,8,8,0.8);">
-  <div style="color:#dc2626;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.6rem;">Stiller</div>
-  <div style="font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom:1.5rem;">Dövme Stillerimiz</div>
-  <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2rem;" id="styleTabs">
-    <button onclick="showStyle('hepsi',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(220,38,38,0.4);border-radius:2rem;font-size:0.82rem;font-weight:700;color:#dc2626;background:rgba(220,38,38,0.1);cursor:pointer;">Tümü</button>
-    <button onclick="showStyle('blackwork',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Blackwork</button>
-    <button onclick="showStyle('realism',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Realism</button>
-    <button onclick="showStyle('geometric',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Geometric</button>
-    <button onclick="showStyle('watercolor',this)" style="padding:0.5rem 1.2rem;border:1px solid rgba(255,255,255,0.1);border-radius:2rem;font-size:0.82rem;font-weight:600;color:#64748b;background:transparent;cursor:pointer;">Watercolor</button>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;" id="styleGrid">
-    <div data-style="blackwork" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="realism" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="geometric" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1513556667906-c27c3cbe82f2?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="watercolor" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="blackwork" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1530510562399-8a1a98a4c95e?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="realism" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="geometric" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div data-style="watercolor" style="aspect-ratio:1;border-radius:0.7rem;overflow:hidden;border:1px solid rgba(220,38,38,0.1);"><img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=400&q=80" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-  </div>
-</section>
 <script>
-function showStyle(style,btn){
-  document.querySelectorAll('#styleTabs button').forEach(b=>{b.style.borderColor='rgba(255,255,255,0.1)';b.style.color='#64748b';b.style.background='transparent';});
-  btn.style.borderColor='rgba(220,38,38,0.4)';btn.style.color='#dc2626';btn.style.background='rgba(220,38,38,0.1)';
-  document.querySelectorAll('#styleGrid [data-style]').forEach(el=>{el.style.display=style==='hepsi'||el.dataset.style===style?'block':'none';});
+/* =========================================================
+   INK SOCIETY — INTERACTIONS
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  // -------- NAV SCROLL STATE --------
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // -------- MOBILE BURGER --------
+  const burger = document.getElementById('navBurger');
+  const links = document.getElementById('navLinks');
+  if (burger) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        links.classList.remove('open');
+      });
+    });
+  }
+
+  // -------- SCROLL REVEAL --------
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // stagger the reveal of multiple items inside the same parent
+          const siblings = entry.target.parentElement
+            ? Array.from(entry.target.parentElement.querySelectorAll('.reveal'))
+            : [];
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('in');
+          }, Math.max(0, idx) * 90);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // -------- SMOOTH SCROLL --------
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const id = anchor.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // -------- PARALLAX HERO BG --------
+  const parallaxEl = document.querySelector('[data-parallax]');
+  if (parallaxEl) {
+    const speed = parseFloat(parallaxEl.dataset.parallax) || 0.25;
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          parallaxEl.style.transform = `translate3d(0, ${y * speed}px, 0) scale(1.05)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // -------- APPOINTMENT FORM --------
+  const form = document.getElementById('appointmentForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('#name').value.trim();
+      const phone = form.querySelector('#phone').value.trim();
+      const size = form.querySelector('#size').value;
+      const style = form.querySelector('#style').value;
+
+      if (!name || !phone || !size || !style) {
+        // simple shake on missing
+        form.style.animation = 'shake 0.4s ease';
+        setTimeout(() => { form.style.animation = ''; }, 500);
+        return;
+      }
+
+      success.classList.add('show');
+      form.reset();
+      setTimeout(() => success.classList.remove('show'), 6000);
+    });
+  }
+
+  // -------- ACTIVE LINK HIGHLIGHT --------
+  const sections = ['studio', 'artists', 'styles', 'gallery', 'appointment'];
+  const navMap = {};
+  sections.forEach(id => {
+    const sec = document.getElementById(id);
+    const link = document.querySelector(`.nav__link[href="#${id}"]`);
+    if (sec && link) navMap[id] = { sec, link };
+  });
+
+  if ('IntersectionObserver' in window) {
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        const id = en.target.id;
+        if (navMap[id] && en.isIntersecting) {
+          Object.values(navMap).forEach(v => v.link.style.color = '');
+          navMap[id].link.style.color = 'var(--neon)';
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.values(navMap).forEach(v => navIO.observe(v.sec));
+  }
+
+  // -------- RANDOM SUBTLE GLITCH ON HERO TITLE --------
+  const title = document.querySelector('.hero__title');
+  if (title) {
+    setInterval(() => {
+      if (Math.random() < 0.15) {
+        const original = title.style.textShadow;
+        title.style.textShadow = '2px 0 var(--pink), -2px 0 var(--lime)';
+        setTimeout(() => { title.style.textShadow = original; }, 80);
+      }
+    }, 2200);
+  }
+})();
+
+// shake keyframes injected via JS to keep CSS section cleaner
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
 }
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
-</script></body>
+`;
+document.head.appendChild(styleSheet);
+</script>
+</body>
 </html>
